@@ -15,4 +15,4 @@ steps:
     script: |
               Write-Host "##vso[task.setvariable variable=Teste]$teste2"
               echo $(teste2)
-              echo $teste
+              echo $Teste
