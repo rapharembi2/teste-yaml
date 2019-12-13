@@ -1,0 +1,21 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool: TFSBuild-3
+
+steps:
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+     echo "antes: "  $(consumerKey-hom)
+     Write-Host "##vso[task.setvariable variable=CosumerKey]$(consumerKey-hom)"
+     Write-Host "##vso[task.setvariable variable=CosumerSecret]$(ConsumerSecret-dev)"
+     Write-Host "##vso[task.setvariable variable=Token]$(Token-dev)"
+     Write-Host "##vso[task.setvariable variable=TokenSecret]$(TokenSecret-dev)"
+     echo "depois: "  $(ConsumerKey)
