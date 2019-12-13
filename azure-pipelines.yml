@@ -17,6 +17,7 @@ steps:
               echo $(teste2)
               echo $Teste
               Write-Host "$Teste"
-              Write-Host "$(Teste)"
+              Write-Host "testando"$Teste
+              Write-Host "testando"$(Teste)
               
     
