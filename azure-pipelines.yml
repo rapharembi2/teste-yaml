@@ -13,9 +13,9 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-     echo "antes: "  $(consumerKey-hom)
-     Write-Host "##vso[task.setvariable variable=CosumerKey]$(consumerKey-hom)"
-     Write-Host "##vso[task.setvariable variable=CosumerSecret]$(ConsumerSecret-dev)"
-     Write-Host "##vso[task.setvariable variable=Token]$(Token-dev)"
-     Write-Host "##vso[task.setvariable variable=TokenSecret]$(TokenSecret-dev)"
-     echo "depois: "  $(ConsumerKey)
+              echo "antes: "  $(consumerKey-hom)
+              Write-Host "##vso[task.setvariable variable=ConsumerKey]$(consumerKey-hom)"
+              Write-Host "##vso[task.setvariable variable=ConsumerSecret]$(ConsumerSecret-dev)"
+              Write-Host "##vso[task.setvariable variable=Token]$(Token-dev)"
+              Write-Host "##vso[task.setvariable variable=TokenSecret]$(TokenSecret-dev)"
+              echo "depois: "  $(ConsumerKey)
