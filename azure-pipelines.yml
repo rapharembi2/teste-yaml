@@ -12,7 +12,7 @@ steps:
    - task: CmdLine@2
      inputs:
        script: |
-         echo "##vso[task.setvariable variable=ConsumerKey]$(ConsumerKey-dev) "
+         echo ##vso[task.setvariable variable=ConsumerKey]$(ConsumerKey-dev) 
          echo "##vso[task.setvariable variable=ConsumerSecret]$(ConsumerSecret-dev) "
          echo "##vso[task.setvariable variable=Token]$(Token-dev) "
          echo "##vso[task.setvariable variable=TokenSecret]$(TokenSecret-dev) "
@@ -24,7 +24,7 @@ steps:
         script: |
           echo $(ConsumerKey)
           echo $(ConsumerSecret)
-          echo $(TokenKey)
+          echo $(Token)
           echo $(TokenSecret)
           echo $(targetMachine)
           echo $(passIDarray)
