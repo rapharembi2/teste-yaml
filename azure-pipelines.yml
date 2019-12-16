@@ -12,12 +12,12 @@ steps:
    - task: CmdLine@2
      inputs:
        script: |
-         echo "##vso[task.setvariable variable=ConsumerKey]$(ConsumerKey-dev)"
-         echo "##vso[task.setvariable variable=ConsumerSecret]$(ConsumerSecret-dev)"
-         echo "##vso[task.setvariable variable=Token]$(Token-dev)"
-         echo "##vso[task.setvariable variable=TokenSecret]$(TokenSecret-dev)"
-         echo "##vso[task.setvariable variable=targetMachine]$(targetMachine-dev)"
-         echo "##vso[task.setvariable variable=passIDarray]$(passIDarray-dev)"
+         echo "##vso[task.setvariable variable=ConsumerKey]$(ConsumerKey-dev) "
+         echo "##vso[task.setvariable variable=ConsumerSecret]$(ConsumerSecret-dev) "
+         echo "##vso[task.setvariable variable=Token]$(Token-dev) "
+         echo "##vso[task.setvariable variable=TokenSecret]$(TokenSecret-dev) "
+         echo "##vso[task.setvariable variable=targetMachine]$(targetMachine-dev) "
+         echo "##vso[task.setvariable variable=passIDarray]$(passIDarray-dev) "
     
    - task: CmdLine@2
      inputs:
