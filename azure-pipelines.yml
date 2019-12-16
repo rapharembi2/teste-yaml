@@ -9,15 +9,13 @@ trigger:
 pool: TFSBuild-3
 
 steps:
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-              Write-Host "##vso[task.setvariable variable=Teste]$teste2"
-              echo $(teste2)
-              echo $Teste
-              Write-Host "$Teste"
-              Write-Host "testando"$Teste
-              Write-Host "testando"$(Teste)
+   - task: Bash@3
+     inputs:
+       targetType: 'inline'
+       script: |
+         echo "##vso[task.setvariable variable=ConsumerKey]$consumerKey-dev"
+             echo $ConsumerKey
+
+    
               
     
