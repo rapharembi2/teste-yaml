@@ -9,9 +9,8 @@ trigger:
 pool: TFSBuild-3
 
 steps:
-   - task: Bash@3
+   - task: CmdLine@2
      inputs:
-       targetType: 'inline'
        script: |
          echo "##vso[task.setvariable variable=ConsumerKey]$consumerKey-dev"
              echo $ConsumerKey
