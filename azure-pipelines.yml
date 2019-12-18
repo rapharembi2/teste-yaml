@@ -9,25 +9,17 @@ trigger:
 pool: TFSBuild-3
 
 steps:
-   - task: CmdLine@2
+   - task: PowerShell@2
      inputs:
        script: |
-         echo ##vso[task.setvariable variable=ConsumerKey]$(ConsumerKey-dev) 
-         echo "##vso[task.setvariable variable=ConsumerSecret]$(ConsumerSecret-dev) "
-         echo "##vso[task.setvariable variable=Token]$(Token-dev) "
-         echo "##vso[task.setvariable variable=TokenSecret]$(TokenSecret-dev) "
-         echo "##vso[task.setvariable variable=targetMachine]$(targetMachine-dev) "
-         echo "##vso[task.setvariable variable=passIDarray]$(passIDarray-dev) "
+         Write-Host $(passIDarray-dev)
+         Write-Host "##vso[task.setvariable variable=ConsumerKey]$(ConsumerKey-dev) 
+         Write-Host ""##vso[task.setvariable variable=ConsumerSecret]$(ConsumerSecret-dev) "
+         Write-Host ""##vso[task.setvariable variable=Token]$(Token-dev) "
+         Write-Host ""##vso[task.setvariable variable=TokenSecret]$(TokenSecret-dev) "
+         Write-Host ""##vso[task.setvariable variable=targetMachine]$(targetMachine-dev) "
+         Write-Host ""##vso[task.setvariable variable=passIDarray]$(passIDarray-dev) "
     
-   - task: CmdLine@2
-     inputs:
-        script: |
-          echo $(ConsumerKey)
-          echo $(ConsumerSecret)
-          echo $(Token)
-          echo $(TokenSecret)
-          echo $(targetMachine)
-          echo $(passIDarray)
     
-              
+             
     
