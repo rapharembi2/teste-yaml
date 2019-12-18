@@ -24,7 +24,7 @@ steps:
                  Write-Host "##vso[task.setvariable variable=Token]$(Token-dev)"
                  Write-Host "##vso[task.setvariable variable=TokenSecret]$(TokenSecret-dev)"
                  Write-Host "##vso[task.setvariable variable=targetMachine]$(targetMachine-dev)"
-                 Write-Host "##vso[task.setvariable variable=passIDarray]$"($passIDarrayDev)""
+                 Write-Host "##vso[task.setvariable variable=passIDarray]$(passIDarrayDev)
                  Write-Host $passIDarray
     
    - task: PowerShell@2
