@@ -13,7 +13,8 @@ steps:
      inputs:
        targetType: 'inline'
        script: |
-         Write-Host $(passIDarray-dev).split(',')
+         $array=$(passIDarray-dev).split(',')
+         Write-Host $array
          Write-Host "##vso[task.setvariable variable=ConsumerKey]$(ConsumerKey-dev) 
          Write-Host ""##vso[task.setvariable variable=ConsumerSecret]$(ConsumerSecret-dev) "
          Write-Host ""##vso[task.setvariable variable=Token]$(Token-dev) "
