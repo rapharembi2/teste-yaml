@@ -23,6 +23,9 @@ steps:
          Write-Host ""##vso[task.setvariable variable=passIDarray]$array "
          Write-Host $passIDarray
     
-    
+   - task: PowerShell@2
+     inputs:
+          targetType: 'inline'
+          script: 'Write-Host $(passIDarray)'
              
     
